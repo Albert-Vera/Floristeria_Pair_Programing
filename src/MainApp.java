@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Código no terminado. Lista TODO para ver lo que falta
  */
-public class AppMain {
+public class MainApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         View view = new View();
@@ -13,8 +13,8 @@ public class AppMain {
         int opcio = opcion_Menu(sc, 3);
 
         switch (opcio){
-            case 1: new Gestio_Floristeria().crear_Floristeria(sc);
-                new Gestio_Floristeria().gestor_Floristeria(sc);
+            case 1:    //new Gestio_Floristeria().crear_Floristeria(sc);
+                       //new Gestio_Floristeria().gestor_Floristeria(sc);
                 break;
             case 2: // salir
                 break;
