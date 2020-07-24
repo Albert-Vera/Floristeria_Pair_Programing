@@ -1,6 +1,6 @@
 package Model;
 
-public class Flor extends Floristeria_Viejo.Model.Article {
+public class Flor  {
     private String color;
 
     public Flor(String color) {

@@ -1,6 +1,6 @@
 package Model;
 
-public class Arbre extends Floristeria_Viejo.Model.Article {
+public class Arbre  {
     private String nom;
     private double altura;
 
