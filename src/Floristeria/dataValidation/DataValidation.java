@@ -75,5 +75,39 @@ public class DataValidation {
 		}
 		return validName;
 	}
+	
+	public boolean verifyDouble(String price) {
+
+		boolean validPrice;
+		String patternNumber = "^\\d*\\.{0,1}\\d+$";
+		Pattern pattern = Pattern.compile(patternNumber);
+		Matcher matcher = pattern.matcher(price);
+
+		double priceValid = 0;
+
+		if (price.isEmpty()) {
+			validPrice = false;
+			System.out.println("\t\t\tIngrese un número valido");
+		} else {
+			try {
+				priceValid = Double.parseDouble(price);
+				if (!matcher.matches()) {
+					validPrice = false;
+					System.out.println("\t\t\tIngrese un número valido.");
+				} else {
+					if (priceValid == 0.0 || priceValid >= 5000) {
+						validPrice = false;
+						System.out.println("\t\t\tIngrese un número valido mayor a 0.0 y menor que 5000.");
+					} else {
+						validPrice = true;
+					}
+				}
+			} catch (NumberFormatException e) {
+				validPrice = false;
+				System.out.println("\t\t\tIngrese un número valido.");
+			}
+		}
+		return validPrice;
+	}
 
 }
