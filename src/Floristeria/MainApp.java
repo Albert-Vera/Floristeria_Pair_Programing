@@ -1,4 +1,6 @@
-import View.View;
+package Floristeria;
+
+import Floristeria.View.View;
 
 import java.util.Scanner;
 
