@@ -6,8 +6,9 @@ import java.util.regex.Pattern;
 public class DataValidation {
 
 	public DataValidation() {
-		
+
 	}
+
 	public boolean verifyData(String textUser) {
 		boolean validT;
 		String patternText = "[a-z\\sA-Z\\s0-9_-]+";
@@ -32,7 +33,7 @@ public class DataValidation {
 		}
 		return validT;
 	}
-	
+
 	public boolean verifyPhone(String phone) {
 
 		boolean validPhone;
@@ -50,7 +51,7 @@ public class DataValidation {
 		}
 		return validPhone;
 	}
-	
+
 	public boolean verifyName(String textName) {
 		boolean validName;
 		String patternText = "[a-z\\sA-Z\\s0-9]+";
@@ -75,7 +76,7 @@ public class DataValidation {
 		}
 		return validName;
 	}
-	
+
 	public boolean verifyDouble(String price) {
 
 		boolean validPrice;
@@ -109,7 +110,7 @@ public class DataValidation {
 		}
 		return validPrice;
 	}
-	
+
 	public boolean verifyText(String textAdd) {
 		boolean validText;
 		String patText = "[a-zA-Z]+";
@@ -130,6 +131,31 @@ public class DataValidation {
 			}
 		}
 		return validText;
+	}
+
+	public boolean verifyOp(String opt) {
+
+		boolean validOpt = true;
+		int option = 0;
+
+		if (opt.isEmpty()) {
+			validOpt = false;
+			System.out.println("\t\t\tIngrese una opcion valida 1 o 2");
+		} else {
+			try {
+				option = Integer.parseInt(opt);
+				if ((option == 1) || (option == 2)) {
+					validOpt = true;
+				} else {
+					validOpt = false;
+					System.out.println("\t\t\tIngrese una opcion valida 1 o 2");
+				}
+			} catch (NumberFormatException e) {
+				validOpt = false;
+				System.out.println("\t\t\tIngrese una opcion valida 1 o 2");
+			}
+		}
+		return validOpt;
 	}
 
 }
