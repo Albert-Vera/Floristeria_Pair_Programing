@@ -1,4 +1,4 @@
-package View;
+package Floristeria.View;
 
 /**
  * Esta clase solo es para printar menus.
