@@ -84,6 +84,6 @@ public class View {
 			}
 		}
 		System.out.print("\n\t\t\t\t\t                        - LA FLORISTERIA TIENE TOTAL " + allArticles.size()
-				+ " ARTICULOS -  ");
+				+ " ARTICULOS -  \n\n");
 	}
 }

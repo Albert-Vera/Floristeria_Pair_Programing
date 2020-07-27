@@ -184,12 +184,13 @@ public class Gestio_Floristeria {
 			pArticle = lectura_Datos(sc);
 			validatePrice = validator.verifyDouble(pArticle);
 		}
-		return price = Double.parseDouble(pArticle);
+		price = Double.parseDouble(pArticle);
+		return price;
 	}
 
 	private String lectura_Datos(Scanner sc) {
 		String dato;
 		dato = sc.nextLine();
 		return dato;
-	}	
+	}
 }
