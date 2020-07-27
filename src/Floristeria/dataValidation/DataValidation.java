@@ -109,5 +109,27 @@ public class DataValidation {
 		}
 		return validPrice;
 	}
+	
+	public boolean verifyText(String textAdd) {
+		boolean validText;
+		String patText = "[a-zA-Z]+";
+		if (textAdd.isEmpty()) {
+			validText = false;
+			System.out.println("\t\t\tIngrese un texto valido");
+		} else {
+			if (!Pattern.matches(patText, textAdd)) {
+				validText = false;
+				System.out.println("\t\t\tNo esta permitido números");
+			} else {
+				if ((textAdd.length() < 3) || (textAdd.length() > 15)) {
+					validText = false;
+					System.out.println("\t\t\tIngresar un texto valido, mínimo 3 caracteres y máximo 15");
+				} else {
+					validText = true;
+				}
+			}
+		}
+		return validText;
+	}
 
 }
