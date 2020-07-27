@@ -1,5 +1,6 @@
 package Floristeria;
 
+import Floristeria.Gestio.Gestio_Floristeria;
 import Floristeria.View.View;
 
 import java.util.Scanner;
@@ -8,15 +9,15 @@ import java.util.Scanner;
  * Código no terminado. Lista TODO para ver lo que falta
  */
 public class MainApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         View view = new View();
         view.menu_Inici();
         int opcio = opcion_Menu(sc, 3);
 
         switch (opcio){
-            case 1:    //new Gestio_Floristeria().crear_Floristeria(sc);
-                       //new Gestio_Floristeria().gestor_Floristeria(sc);
+            case 1:    new Gestio_Floristeria().crear_Floristeria(sc);
+                       new Gestio_Floristeria().gestor_Floristeria(sc);
                 break;
             case 2: // salir
                 break;
