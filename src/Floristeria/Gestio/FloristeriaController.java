@@ -2,8 +2,13 @@ package Floristeria.Gestio;
 
 import Floristeria.Model.Floristeria;
 import Floristeria.persistence.FloristeriaRepository;
+import Floristeria.Model.Article;
 import Floristeria.Model.Decoracio;
 import Floristeria.Model.Flor;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import Floristeria.Model.Arbre;
 
 public class FloristeriaController {
@@ -39,6 +44,18 @@ public class FloristeriaController {
 		Decoracio decoration = new Decoracio(name, price, material);
 		repository.addArticle(decoration);
 		System.out.println("" + decoration.getNom() + " | " + decoration.getPreu() + " | " + decoration.getMaterial());
+	}
+	
+	public List<Article> getAllFloritsArticles() {
+		List<Article> articlesList = new ArrayList<>();
+		articlesList = repository.getAllArticles();
+		return articlesList;
+	}
+	
+	public Floristeria getFlorist() {		
+		Floristeria floristeria = new Floristeria();
+		floristeria = repository.getFlorist();				
+		return floristeria;
 	}
 
 }
