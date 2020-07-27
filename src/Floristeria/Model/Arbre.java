@@ -1,27 +1,20 @@
 package Floristeria.Model;
 
-public class Arbre  {
-    private String nom;
-    private double altura;
+public class Arbre extends Article {
 
-    public Arbre(String nom, double altura) {
-        this.nom = nom;
-        this.altura = altura;
-    }
+	private double altura;
 
-    public String getNom() {
-        return nom;
-    }
+	public Arbre(String nom, double preu, double altura) {
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+		super(nom, preu);
+		this.altura = altura;
+	}
 
-    public double getAltura() {
-        return altura;
-    }
+	public double getAltura() {
+		return altura;
+	}
 
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
 }
