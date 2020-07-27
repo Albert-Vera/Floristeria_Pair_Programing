@@ -1,10 +1,10 @@
-package persistence;
+package Floristeria.persistence;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Model.Article;
-import Model.Floristeria;
+import Floristeria.Model.Floristeria;
+import Floristeria.Model.Article;
 
 public class FloristeriaRepository {
 

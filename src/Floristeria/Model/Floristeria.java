@@ -1,4 +1,5 @@
-package Model;
+package Floristeria.Model;
+
 
 public class Floristeria {
     private String nom, adress, phone;
@@ -36,4 +37,5 @@ public class Floristeria {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 }

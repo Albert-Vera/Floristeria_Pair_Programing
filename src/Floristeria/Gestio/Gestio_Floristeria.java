@@ -1,9 +1,9 @@
-package Gestio;
+package Floristeria.Gestio;
 
+import static Floristeria.MainApp.opcion_Menu;
+import Floristeria.dataValidation.DataValidation;
+import Floristeria.View.*;
 import java.util.Scanner;
-
-import View.View;
-import dataValidation.DataValidation;
 
 
 
@@ -13,7 +13,7 @@ public class Gestio_Floristeria {
 	DataValidation validator = new DataValidation();
 
 	public Gestio_Floristeria() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public void crear_Floristeria(Scanner sc) throws Exception {
@@ -44,6 +44,30 @@ public class Gestio_Floristeria {
 
 		controller.createFlorist(nameFlorist, address, phone);
 
+	}
+	
+	public void gestor_Floristeria(Scanner sc) throws Exception {
+		while (true) {
+			new View().Gestor_Floristeria();
+			int opcion = opcion_Menu(sc, 6);
+
+			switch (opcion) {
+			case 1:
+			//	insertar_Arbol(sc);
+				break;
+			case 2:
+				//insertar_Flor(sc);
+				break;
+			case 3:
+			//	insertar_Decoracion(sc);
+				break;
+			case 4:
+				new View().ver_stock();
+				break;
+			case 5:
+				System.exit(0);
+			}
+		}
 	}
 	
 	public String addName(Scanner sc) {

@@ -1,4 +1,4 @@
-package Model;
+package Floristeria.Model;
 
 public class Article {
     private String nom;

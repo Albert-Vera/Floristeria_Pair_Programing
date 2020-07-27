@@ -1,8 +1,8 @@
-package Gestio;
+package Floristeria.Gestio;
 
 
-import Model.Floristeria;
-import persistence.FloristeriaRepository;
+import Floristeria.Model.Floristeria;
+import Floristeria.persistence.FloristeriaRepository;
 
 public class FloristeriaController {
 
