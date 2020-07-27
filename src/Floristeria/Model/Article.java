@@ -1,22 +1,30 @@
 package Floristeria.Model;
 
 public class Article {
-    private String nom;
-    private double preu;
+	private String nom;
+	private double preu;
 
-    public String getNom() {
-        return nom;
-    }
+	public Article() {
+	}
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+	public Article(String nom, double preu) {
+		this.nom = nom;
+		this.preu = preu;
+	}
 
-    public double getPreu() {
-        return preu;
-    }
+	public String getNom() {
+		return nom;
+	}
 
-    public void setPreu(double preu) {
-        this.preu = preu;
-    }
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public double getPreu() {
+		return preu;
+	}
+
+	public void setPreu(double preu) {
+		this.preu = preu;
+	}
 }
