@@ -3,6 +3,7 @@ package Floristeria.Gestio;
 
 import Floristeria.Model.Floristeria;
 import Floristeria.persistence.FloristeriaRepository;
+import Floristeria.Model.Flor;
 import Floristeria.Model.Arbre;
 
 public class FloristeriaController {
@@ -23,6 +24,11 @@ public class FloristeriaController {
 		Arbre tree = new Arbre(name, price, height);
 		repository.addArticle(tree);
 	//	System.out.println(""+tree.getNom()+ " | "+tree.getPreu()+ " | "+ tree.getAltura());
+	}
+	public void addFlower(String name, double price, String color) throws Exception {
+		Flor flower = new Flor(name,price,color);
+		repository.addArticle(flower);
+	//	System.out.println(""+flower.getNom()+ " | "+flower.getPreu()+ " | "+ flower.getColor());
 	}
 
 }
