@@ -1,9 +1,10 @@
 package Floristeria.Model;
 
-public class Flor  {
+public class Flor extends Article {
     private String color;
 
-    public Flor(String color) {
+    public Flor(String nom, double preu, String color) {
+		super(nom, preu);
         this.color = color;
     }
 
