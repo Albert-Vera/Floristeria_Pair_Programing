@@ -2,6 +2,7 @@ package Floristeria.Gestio;
 
 import static Floristeria.MainApp.opcion_Menu;
 import Floristeria.dataValidation.DataValidation;
+import Floristeria.Model.Decoracio.Decorat_Type;
 import Floristeria.View.*;
 import java.util.Scanner;
 
@@ -51,13 +52,13 @@ public class Gestio_Floristeria {
 
 			switch (opcion) {
 			case 1:
-				// insertar_Arbol(sc);
+				insertar_Arbol(sc);
 				break;
 			case 2:
-				// insertar_Flor(sc);
+				insertar_Flor(sc);
 				break;
 			case 3:
-				// insertar_Decoracion(sc);
+				insertar_Decoracion(sc);
 				break;
 			case 4:
 				new View().ver_stock();
@@ -89,6 +90,70 @@ public class Gestio_Floristeria {
 		double treePrice = addPrice(sc);
 
 		controller.addTree(treeName, treePrice, treeHeight);
+
+	}
+
+	void insertar_Flor(Scanner sc) throws Exception {
+
+		System.out.print("\n\t\t\t\t\t\t                            - FLOR -  ");
+
+		String flowerName = addName(sc);
+
+		System.out.print("\t\t\tPor favor ingrese el color: ");
+
+		String flowerColor = lectura_Datos(sc);
+		boolean validateColor = validator.verifyText(flowerColor);
+
+		while (!validateColor) {
+			System.out.print("\t\t\tPor favor ingrese el color: ");
+			flowerColor = lectura_Datos(sc);
+			validateColor = validator.verifyText(flowerColor);
+		}
+
+		double flowerPrice = addPrice(sc);
+
+		controller.addFlower(flowerName, flowerPrice, flowerColor);
+
+	}
+
+	void insertar_Decoracion(Scanner sc) throws Exception {
+
+		System.out.print("\n\t\t\t\t\t\t                            - DECORACIÓN -  ");
+
+		String decorationName = addName(sc);
+		Decorat_Type dF = Decorat_Type.FUSTA;
+		Decorat_Type dP = Decorat_Type.PLASTIC;
+		String typeMaterial = "";
+		int option = 0;
+
+		System.out.println("\t\t\t1. " + dF.name());
+		System.out.println("\t\t\t2. " + dP.name());
+		System.out.print("\t\t\tPor favor seleccione el material 1 o 2: ");
+		String mDeco = lectura_Datos(sc);
+		boolean validateOption = validator.verifyOp(mDeco);
+
+		while (!validateOption) {
+
+			System.out.println("\t\t\t1. " + dF.name());
+			System.out.println("\t\t\t2. " + dP.name());
+			System.out.print("\t\t\tPor favor seleccione el material 1 o 2: ");
+			mDeco = lectura_Datos(sc);
+			validateOption = validator.verifyOp(mDeco);
+		}
+
+		option = Integer.parseInt(mDeco);
+
+		if (option == 1) {
+			typeMaterial = dF.name();
+		} else {
+			if (option == 2) {
+				typeMaterial = dP.name();
+			}
+		}
+
+		double decorationPrice = addPrice(sc);
+
+		controller.addDecoration(decorationName, decorationPrice, typeMaterial);
 
 	}
 
