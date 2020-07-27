@@ -5,17 +5,15 @@ import Floristeria.dataValidation.DataValidation;
 import Floristeria.View.*;
 import java.util.Scanner;
 
-
-
 public class Gestio_Floristeria {
-	
+
 	FloristeriaController controller = new FloristeriaController();
 	DataValidation validator = new DataValidation();
 
 	public Gestio_Floristeria() {
-		
+
 	}
-	
+
 	public void crear_Floristeria(Scanner sc) throws Exception {
 
 		new View().menu_Crear_Floristeria();
@@ -45,7 +43,7 @@ public class Gestio_Floristeria {
 		controller.createFlorist(nameFlorist, address, phone);
 
 	}
-	
+
 	public void gestor_Floristeria(Scanner sc) throws Exception {
 		while (true) {
 			new View().Gestor_Floristeria();
@@ -53,13 +51,13 @@ public class Gestio_Floristeria {
 
 			switch (opcion) {
 			case 1:
-			//	insertar_Arbol(sc);
+				// insertar_Arbol(sc);
 				break;
 			case 2:
-				//insertar_Flor(sc);
+				// insertar_Flor(sc);
 				break;
 			case 3:
-			//	insertar_Decoracion(sc);
+				// insertar_Decoracion(sc);
 				break;
 			case 4:
 				new View().ver_stock();
@@ -69,7 +67,31 @@ public class Gestio_Floristeria {
 			}
 		}
 	}
-	
+
+	void insertar_Arbol(Scanner sc) throws Exception {
+
+		System.out.print("\n\t\t\t\t\t\t                            - ARBOL -  ");
+
+		String treeName = addName(sc);
+
+		System.out.print("\t\t\tPor favor ingrese el altura en centimetros: ");
+		double treeHeight = 0;
+		String hTree = lectura_Datos(sc);
+		boolean validateHeight = validator.verifyDouble(hTree);
+
+		while (!validateHeight) {
+			System.out.print("\t\t\tPor favor ingrese la altura en centimetros: ");
+			hTree = lectura_Datos(sc);
+			validateHeight = validator.verifyDouble(hTree);
+		}
+		treeHeight = Double.parseDouble(hTree);
+
+		double treePrice = addPrice(sc);
+
+		controller.addTree(treeName, treePrice, treeHeight);
+
+	}
+
 	public String addName(Scanner sc) {
 
 		System.out.print("\n\n\t\t\tPor favor ingrese el nombre: ");
@@ -84,8 +106,22 @@ public class Gestio_Floristeria {
 		}
 		return name;
 	}
-	
-	
+
+	public double addPrice(Scanner sc) {
+
+		double price = 0;
+		System.out.print("\t\t\tPor favor ingrese el precio en  \u20AC : ");
+		String pArticle = lectura_Datos(sc);
+		boolean validatePrice = validator.verifyDouble(pArticle);
+
+		while (!validatePrice) {
+			System.out.print("\t\t\tPor favor ingrese el precio en \u20AC: ");
+			pArticle = lectura_Datos(sc);
+			validatePrice = validator.verifyDouble(pArticle);
+		}
+		return price = Double.parseDouble(pArticle);
+	}
+
 	private String lectura_Datos(Scanner sc) {
 		String dato;
 		dato = sc.nextLine();
