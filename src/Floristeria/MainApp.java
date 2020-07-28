@@ -6,8 +6,19 @@ import Floristeria.View.View;
 import java.util.Scanner;
 
 /**
- * Código no terminado. Lista TODO para ver lo que falta
- */
+ * Exercici Pair Programming
+ * En una floristeria, que té un nom, tenim arbres, flors i decoració.
+ * Cada arbre té una alçadaa
+ * Les flors tenen un color
+ * La decoració té un tipus de material: fusta o plàstic.
+ * Tots tenen un preu.
+ * Fer funcionalitats en un Main:
+ * crearFloristeria , afegirArbre, afegirFlor, afegirDecoracio , stock: tots els arbre, flors i decoració que té la floristeria 
+ *  
+ * @authors Albert Vera - Yohanna Mideros G.
+ * @version 1.0
+ * */
+
 public class MainApp {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
@@ -19,7 +30,7 @@ public class MainApp {
             case 1:    new Gestio_Floristeria().crear_Floristeria(sc);
                        new Gestio_Floristeria().gestor_Floristeria(sc);
                 break;
-            case 2: // salir
+            case 2: System.exit(0);
                 break;
         }
     }

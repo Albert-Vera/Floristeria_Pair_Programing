@@ -6,6 +6,11 @@ import Floristeria.Model.Decoracio.Decorat_Type;
 import Floristeria.View.*;
 import java.util.Scanner;
 
+/**
+* @authors Albert Vera - Yohanna Mideros Giraldo
+* @version 1.0 
+* */
+
 public class Gestio_Floristeria {
 
 	FloristeriaController controller = new FloristeriaController();

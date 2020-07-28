@@ -3,6 +3,18 @@ package Floristeria.dataValidation;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * This class contains various methods necessary to validate text fields,
+ * numbers, voids.
+ * 
+ * @authors Albert Vera - Yohanna Mideros Giraldo
+ * @version 1.0
+ * @throws NumberFormatException Thrown to indicate that the application has
+ *                               attempted to convert a string to one of the
+ *                               numeric types, but that the string does not
+ *                               have the appropriate format.
+ */
+
 public class DataValidation {
 
 	public DataValidation() {

@@ -1,5 +1,10 @@
 package Floristeria.Model;
 
+/**
+* @authors Albert Vera - Yohanna Mideros Giraldo
+* @version 1.0 
+* */
+
 public class Flor extends Article {
     private String color;
 
