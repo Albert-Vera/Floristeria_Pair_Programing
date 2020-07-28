@@ -1,22 +1,44 @@
 package Floristeria.Model;
 
 public class Article {
-    private String nom;
-    private double preu;
+	protected int id;
+	private String nom;
+	private double preu;
+	private static int COUNTER_ARTICLES = 1;
 
-    public String getNom() {
-        return nom;
-    }
+	public Article() {
+	}
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+	public Article(String nom, double preu) {
+		this.nom = nom;
+		this.preu = preu;
+		id = COUNTER_ARTICLES;
+    	COUNTER_ARTICLES++;
+	}
+	
+	
 
-    public double getPreu() {
-        return preu;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setPreu(double preu) {
-        this.preu = preu;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public double getPreu() {
+		return preu;
+	}
+
+	public void setPreu(double preu) {
+		this.preu = preu;
+	}
 }

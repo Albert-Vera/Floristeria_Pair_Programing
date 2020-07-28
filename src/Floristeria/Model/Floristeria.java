@@ -1,9 +1,20 @@
 package Floristeria.Model;
 
+
 public class Floristeria {
     private String nom, adress, phone;
+    
+    public Floristeria() {
+    }
+    
+    public Floristeria(String nom, String adress, String phone) {
+		super();
+		this.nom = nom;
+		this.adress = adress;
+		this.phone = phone;
+	}
 
-    public String getNom() {
+	public String getNom() {
         return nom;
     }
 
@@ -26,4 +37,5 @@ public class Floristeria {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 }
