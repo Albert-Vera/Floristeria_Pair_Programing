@@ -6,8 +6,10 @@ import Floristeria.Gestio.FloristeriaController;
 import Floristeria.Model.*;
 
 /**
- * Esta clase solo es para printar menus.
- */
+* @authors Albert Vera - Yohanna Mideros Giraldo
+* @version 1.0 
+* */
+
 public class View {
 	public void menu_Inici() {
 		System.out
@@ -51,9 +53,6 @@ public class View {
 	}
 
 	public void ver_stock() {
-		// TODO qui falta printar el stock, aunque lo suyo es hacer la lógica en un
-		// método en Gestion_Floristeris y
-		// TODO aqui solo imprimir por pantalla.
 
 		FloristeriaController controller = new FloristeriaController();
 		Floristeria florist = controller.getFlorist();

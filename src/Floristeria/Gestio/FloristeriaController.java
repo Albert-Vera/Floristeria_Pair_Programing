@@ -5,11 +5,13 @@ import Floristeria.persistence.FloristeriaRepository;
 import Floristeria.Model.Article;
 import Floristeria.Model.Decoracio;
 import Floristeria.Model.Flor;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import Floristeria.Model.Arbre;
+/**
+* @authors Albert Vera - Yohanna Mideros Giraldo
+* @version 1.0 
+* */
 
 public class FloristeriaController {
 

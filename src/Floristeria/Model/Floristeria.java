@@ -1,5 +1,9 @@
 package Floristeria.Model;
 
+/**
+* @authors Albert Vera - Yohanna Mideros Giraldo
+* @version 1.0 
+* */
 
 public class Floristeria {
     private String nom, adress, phone;

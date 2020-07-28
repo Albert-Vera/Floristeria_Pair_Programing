@@ -6,6 +6,11 @@ import java.util.List;
 import Floristeria.Model.Floristeria;
 import Floristeria.Model.Article;
 
+/**
+* @authors Albert Vera - Yohanna Mideros Giraldo
+* @version 1.0 
+* */
+
 public class FloristeriaRepository {
 
 	private static List<Article> articles = new ArrayList<>();
